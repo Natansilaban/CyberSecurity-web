@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Natan Silaban Cyber Security</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background-color: #222;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 2.5em;
+    }
+
+    header p {
+      font-size: 1.2em;
+    }
+
+    /* Navigation */
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #333;
+      padding: 10px 0;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      margin: 0 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #007bff;
+    }
+
+    /* Hero Section */
+    .hero {
+      background-image: url('Home _ Grupo LDE.jpeg');
+      background-size: cover;
+      background-position: center;
+      padding: 150px 20px;
+      text-align: center;
+      color: white;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero h2 {
+      font-size: 3.5em;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.5em;
+      margin-bottom: 30px;
+    }
+
+    .hero button {
+      padding: 15px 40px;
+      background-color: #007bff;
+      color: white;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .hero button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Services Section */
+    .services {
+      padding: 50px 20px;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    .services h2 {
+      font-size: 2.5em;
+      color: #222;
+      margin-bottom: 40px;
+    }
+
+    .service-cards {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .service-card {
+      background-color: #f0f0f0;
+      padding: 30px;
+      border-radius: 10px;
+      width: 300px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: scale(1.05);
+    }
+
+    .service-card h3 {
+      font-size: 1.8em;
+      margin-bottom: 10px;
+      color: #007bff;
+    }
+
+    .service-card p {
+      font-size: 1.1em;
+      color: #666;
+    }
+
+    /* Testimonial Section */
+    .testimonials {
+      padding: 50px 20px;
+      background-color: #f9f9f9;
+      text-align: center;
+    }
+
+    .testimonials h2 {
+      font-size: 2.5em;
+      color: #222;
+      margin-bottom: 40px;
+    }
+
+    .testimonial-cards {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .testimonial-card {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      width: 300px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .testimonial-card p {
+      font-size: 1.1em;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    .testimonial-card h3 {
+      font-size: 1.5em;
+      margin-top: 20px;
+      color: #007bff;
+    }
+
+    /* Blog Section */
+    .blog {
+      padding: 50px 20px;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    .blog h2 {
+      font-size: 2.5em;
+      color: #222;
+      margin-bottom: 40px;
+    }
+
+    .blog-articles {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .blog-article {
+      background-color: #f0f0f0;
+      padding: 30px;
+      border-radius: 10px;
+      width: 300px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .blog-article:hover {
+      transform: scale(1.05);
+    }
+
+    .blog-article h3 {
+      font-size: 1.8em;
+      margin-bottom: 10px;
+      color: #007bff;
+    }
+
+    .blog-article p {
+      font-size: 1.1em;
+      color: #666;
+    }
+
+    /* Contact Section */
+    .contact {
+      padding: 50px 20px;
+      background-color: #f9f9f9;
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: 2.5em;
+      color: #222;
+      margin-bottom: 40px;
+    }
+
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-form input, .contact-form textarea {
+      padding: 15px;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 1.1em;
+    }
+
+    .contact-form button {
+      background-color: #007bff;
+      color: white;
+      padding: 15px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.2em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 1em;
+      margin-bottom: 10px;
+    }
+
+    footer a {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .service-cards, .testimonial-cards, .blog-articles {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .service-card, .testimonial-card, .blog-article {
+        width: 100%;
+        max-width: 600px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Natan Silaban Cyber Security</h1>
+    <p>Protecting your digital world with top-notch cybersecurity solutions.</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Cybersecurity for a Safer Tomorrow</h2>
+    <p>Stay one step ahead of cyber threats with Natan Silaban's expert services.</p>
+    <button>Learn More</button>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="service-cards">
+      <div class="service-card">
+        <h3>Penetration Testing</h3>
+        <p>Identify vulnerabilities before attackers do with comprehensive penetration testing services.</p>
+      </div>
+      <div class="service-card">
+        <h3>Network Security</h3>
+        <p>Protect your network from unauthorized access and malicious attacks.</p>
+      </div>
+      <div class="service-card">
+        <h3>Incident Response</h3>
+        <p>Our experts are ready to respond to any cybersecurity incidents swiftly and effectively.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial-cards">
+      <div class="testimonial-card">
+        <p>"Natan's team helped us secure our entire network infrastructure. We feel much safer now!"</p>
+        <h3>- John Doe, CEO of TechCorp</h3>
+      </div>
+      <div class="testimonial-card">
+        <p>"Their incident response service was a lifesaver. They stopped a breach in progress!"</p>
+        <h3>- Sarah Smith, IT Manager</h3>
+      </div>
+      <div class="testimonial-card">
+        <p>"Professional, reliable, and always one step ahead. Natan Silaban is the best!"</p>
+        <h3>- David Lee, CTO of FinTech Solutions</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section id="blog" class="blog">
+    <h2>Latest from Our Blog</h2>
+    <div class="blog-articles">
+      <div class="blog-article">
+        <h3>Top 5 Cyber Threats of 2024</h3>
+        <p>Discover the most significant cybersecurity risks you'll face this year and how to mitigate them.</p>
+      </div>
+      <div class="blog-article">
+        <h3>How to Secure Your Remote Workforce</h3>
+        <p>Learn the best practices for ensuring the security of your employees working from home.</p>
+      </div>
+      <div class="blog-article">
+        <h3>Incident Response: What You Need to Know</h3>
+        <p>Get insights into the critical steps to take when your organization faces a cyber attack.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form class="contact-form" action="#" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Natan Silaban Cyber Security. All Rights Reserved.</p>
+    <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+  </footer>
+
+</body>
+</html>
